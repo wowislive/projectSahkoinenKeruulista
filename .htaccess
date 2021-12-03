@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Please Enter Password"
+AuthUserFile /u/c/e2101942/PSW/.htpasswd
+Require valid-user

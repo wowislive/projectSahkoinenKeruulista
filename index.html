@@ -6,7 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sähköinen keruulista</title>
   </head>
-  <body>
-    <div></div>
+  <body onload="init()">
+    <div>
+      <div>
+        <div><input type="text" name="searchField" id="searchField" /></div>
+        <div>
+          <input
+            type="radio"
+            name="searchCriteria"
+            id="radioOrderId"
+            onclick="toggleSearchErrMsg()"
+          />
+          <label for="radioOrderId">Order ID</label>
+          <input
+            type="radio"
+            name="searchCriteria"
+            id="radioCustomer"
+            onclick="toggleSearchErrMsg()"
+          />
+          <label for="radioCustomer">Сustomer</label>
+          <input
+            type="radio"
+            name="searchCriteria"
+            id="radioCustomerId"
+            onclick="toggleSearchErrMsg()"
+          />
+          <label for="radioCustomerId">Customer ID</label>
+        </div>
+        <div id="searchErrMsg" style="display: none; color: red">
+          <p>Select your search criteria ...</p>
+        </div>
+        <div><input type="button" value="Search" id="searchBtn" /></div>
+      </div>
+      <div><p></p></div>
+    </div>
+    <script src="app.js"></script>
   </body>
 </html>
