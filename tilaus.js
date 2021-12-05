@@ -1,0 +1,92 @@
+let orderData = JSON.parse(localStorage.order);
+let orderID = "comment" + orderData.orderid;
+let text = "";
+
+//function to build the order table
+function tableConstruct() {
+  let tableContent = "";
+  tableContent =
+    "<tr><th>Order ID</th><td>" +
+    orderData.orderid +
+    "</td></tr>" +
+    "<tr><th>Customer</th><td>" +
+    orderData.customer +
+    "</td></tr>" +
+    "<tr><th>Customer ID</th><td>" +
+    orderData.customerid +
+    "</td></tr>" +
+    "<tr><th>Delivery address</th><td>" +
+    orderData.delivaddr +
+    "</td></tr>" +
+    "<tr><th>Delivery date</th><td>" +
+    orderData.deliverydate +
+    "</td></tr>" +
+    "<tr><th>Investment Address</th><td>" +
+    orderData.invaddr +
+    "</td></tr>" +
+    "<tr><th>Responsible salesperson</th><td>" +
+    orderData.respsalesperson +
+    "</td></tr>" +
+    "<tr><th>Total price</th><td>" +
+    orderData.totalprice +
+    "</td></tr>" +
+    "<tr><th>Comment</th><td>" +
+    orderData.comment +
+    "</td></tr>";
+  document.getElementById("orderTable").innerHTML = tableContent;
+}
+
+//function for building cards with ordered products
+function constructProductsList() {
+  let productsList = "";
+  let productInteract = "";
+  orderData.products.forEach(function (key) {
+    productsList +=
+      "<div><table class = 'products'><tr><th>Product</th><td>" +
+      key.product +
+      "</td></tr><tr><th>Description</th><td>" +
+      key.description +
+      "</td></tr><tr><th>Code</th><td>" +
+      key.code +
+      "</td></tr><tr><th>Quantity</th><td>" +
+      key.qty +
+      "</td></tr><tr><th>Shelf</th><td>" +
+      key.shelf_pos +
+      "</td></tr><tr><th>Supplier code</th><td>" +
+      key.suppliercode +
+      "</td></tr><tr><th>Price per unit</th><td>" +
+      key.unit_price +
+      "</td></tr></table></div><br />";
+  });
+  document.getElementById("products").innerHTML = productsList;
+}
+
+//function to post a comment. Store this comment in local storage
+function sendComment() {
+  let comment = document.getElementById("commentField").value;
+  if (comment != "") {
+    text = localStorage.getItem(orderID);
+    if (text != null) {
+      text += comment + "<br />";
+    } else {
+      text = comment + "<br />";
+    }
+    localStorage.setItem(orderID, text);
+    document.getElementById("commentHere").innerHTML = text;
+    document.getElementById("commentField").value = "";
+  }
+}
+
+//function to delete comments
+function clearComments() {
+  localStorage.setItem(orderID, "");
+  document.getElementById("commentHere").innerHTML = "";
+}
+
+//a function that runs when the page is fully loaded
+function init() {
+  document.getElementById("commentHere").innerHTML =
+    localStorage.getItem(orderID);
+  tableConstruct();
+  constructProductsList();
+}

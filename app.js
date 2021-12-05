@@ -8,29 +8,32 @@ function storeData(data) {
   localStorage.setItem("orders", JSON.stringify(data));
 }
 
-//search for order by customer
+//search for order by customer. Store order data for the next usage
 function searchDataByCustomer(orderData, searchFieldData) {
   orderData.forEach(function (key) {
     if (key.customer == searchFieldData) {
-      console.log(key);
+      localStorage.setItem("order", JSON.stringify(key));
+      location.href = "tilaus.html";
     }
   });
 }
 
-//search for order by customerID
+//search for order by customerID. Store order data for the next usage
 function searchDataByCustomerId(orderData, searchFieldData) {
   orderData.forEach(function (key) {
     if (key.customerid == searchFieldData) {
-      console.log(key);
+      localStorage.setItem("order", JSON.stringify(key));
+      location.href = "tilaus.html";
     }
   });
 }
 
-//search for order by orderID
+//search for order by orderID. Store order data for the next usage
 function searchDataByOrderId(orderData, searchFieldData) {
   orderData.forEach(function (key) {
     if (key.orderid == searchFieldData) {
-      console.log(key);
+      localStorage.setItem("order", JSON.stringify(key));
+      location.href = "tilaus.html";
     }
   });
 }

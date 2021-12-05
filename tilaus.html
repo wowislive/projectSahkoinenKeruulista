@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tilaus</title>
+    <style>
+      table.order {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      table.order th,
+      table.order td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      table.products,
+      table.products td,
+      table.products th {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body onload="init()">
+    <div>
+      <div><table id="orderTable" class="order"></table></div>
+      <br />
+      <div id="products"></div>
+      <div><p id="commentHere"></p></div>
+      <div>
+        <textarea
+          name="commentField"
+          id="commentField"
+          cols="30"
+          rows="10"
+        ></textarea>
+      </div>
+      <div>
+        <input type="button" value="Send comment" onclick="sendComment()" />
+        <input type="button" value="Clear comments" onclick="clearComments()" />
+      </div>
+      <div><a href="index.html">Homepage</a></div>
+    </div>
+    <script src="tilaus.js"></script>
+  </body>
+</html>
