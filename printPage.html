@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Print</title>
+    <style>
+      @media print {
+        #printPageButton,
+        #printPagehref,
+        #printPagehrefTwo {
+          display: none;
+        }
+      }
+      table.order {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      table.order th,
+      table.order td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      table.products {
+        border-bottom: 1px solid black;
+        border-top: 1px solid black;
+      }
+    </style>
+  </head>
+  <body onload="init()">
+    <div>
+      <div><table id="orderTable" class="order"></table></div>
+      <div id="products"></div>
+    </div>
+    <br />
+    <div>
+      <button id="printPageButton" onclick="window.print()">Print page</button>
+    </div>
+    <br />
+    <div><a id="printPagehrefTwo" href="tilaus.html">Back</a></div>
+    <div><a id="printPagehref" href="index.html">Homepage</a></div>
+    <script src="printPage.js"></script>
+  </body>
+</html>

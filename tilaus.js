@@ -123,6 +123,11 @@ function clearComments() {
   document.getElementById("commentHere").innerHTML = "";
 }
 
+//redirect to printpage
+function goToPrintPage() {
+  location.href = "printPage.html";
+}
+
 //checks local storage and marks tables in color. also puts comments on the page
 function checkLocal() {
   document.getElementById("commentHere").innerHTML =
