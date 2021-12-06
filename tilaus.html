@@ -27,6 +27,14 @@
   <body onload="init()">
     <div>
       <div><table id="orderTable" class="order"></table></div>
+      <div>
+        <input type="button" value="Mark us done" onclick="orderDone()" />
+        <input
+          type="button"
+          value="Order not ready"
+          onclick="orderNotReady()"
+        />
+      </div>
       <br />
       <div id="products"></div>
       <div><p id="commentHere"></p></div>
