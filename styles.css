@@ -1,0 +1,100 @@
+#searchErrMsg {
+  display: none;
+}
+
+@media print {
+  #printPageButton,
+  #printPagehref,
+  #printPagehrefTwo,
+  #printPageHr,
+  #printPageHrTwo {
+    display: none;
+  }
+}
+
+table.printPageOrder {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table.printPageOrder th,
+table.printPageOrder td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table.printPageProducts {
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+}
+
+table.order {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table.order th,
+table.order td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table.products,
+table.products td,
+table.products th {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.inputText {
+  width: 35%;
+  border: 2px solid #494949;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+.inputText:focus {
+  border-color: dodgerBlue;
+  box-shadow: 0 0 8px 0 dodgerBlue;
+}
+.myBtn {
+  border-radius: 4px;
+  color: #494949 !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #ffffff;
+  padding: 12px;
+  border: 2px solid #494949 !important;
+  display: inline-block;
+  transition: all 0.4s ease 0s;
+}
+.myBtn:hover {
+  color: #ffffff !important;
+  background: #3b6df6;
+  border-color: #3b6df6 !important;
+  transition: all 0.4s ease 0s;
+}
+body {
+  font-family: "Source Code Pro", sans-serif;
+}
+p {
+  margin-top: 2em;
+  color: #494949;
+}
+a {
+  margin: auto;
+  padding: 1rem 1.25rem;
+  font-family: sans-serif;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: #494949;
+}
+a:hover {
+  color: #3b6df6;
+}

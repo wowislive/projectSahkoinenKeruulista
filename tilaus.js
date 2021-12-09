@@ -47,9 +47,9 @@ function constructProductsList() {
     let replaced = x.replaceAll(" ", "");
     localProductCheck.push(replaced);
     productBtnDone =
-      "<div><input type='button' value='Mark us done' onclick=productDone(\"" +
+      "<div><input type='button' class='myBtn' value='Mark us done' onclick=productDone(\"" +
       replaced +
-      "\") /><input type='button' value='Product not ready' onclick=productNotReady(\"" +
+      "\") /><input type='button' class='myBtn' value='Product not ready' onclick=productNotReady(\"" +
       replaced +
       '") /></div>';
     productsList +=

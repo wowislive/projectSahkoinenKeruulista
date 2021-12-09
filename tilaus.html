@@ -5,34 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tilaus</title>
-    <style>
-      table.order {
-        border-collapse: collapse;
-        width: 100%;
-      }
-      table.order th,
-      table.order td {
-        padding: 8px;
-        text-align: left;
-        border-bottom: 1px solid #ddd;
-      }
-      table.products,
-      table.products td,
-      table.products th {
-        border: 1px solid black;
-        border-collapse: collapse;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body onload="init()">
     <div>
       <div><table id="orderTable" class="order"></table></div>
+      <br />
       <div>
-        <input type="button" value="Mark us done" onclick="orderDone()" />
+        <input
+          type="button"
+          class="myBtn"
+          value="Mark us done"
+          onclick="orderDone()"
+        />
         <input
           type="button"
           value="Order not ready"
           onclick="orderNotReady()"
+          class="myBtn"
         />
       </div>
       <br />
@@ -42,18 +32,40 @@
         <textarea
           name="commentField"
           id="commentField"
+          class="inputText"
           cols="30"
           rows="10"
         ></textarea>
       </div>
       <div>
-        <input type="button" value="Send comment" onclick="sendComment()" />
-        <input type="button" value="Clear comments" onclick="clearComments()" />
+        <input
+          type="button"
+          class="myBtn"
+          value="Send comment"
+          onclick="sendComment()"
+        />
+        <input
+          type="button"
+          class="myBtn"
+          value="Clear comments"
+          onclick="clearComments()"
+        />
+      </div>
+      <br />
+      <div>
+        <input
+          type="button"
+          class="myBtn"
+          value="Print order"
+          onclick="goToPrintPage()"
+        />
       </div>
       <div>
-        <input type="button" value="Print order" onclick="goToPrintPage()" />
+        <br />
+        <hr />
+        <a href="index.html">Homepage</a>
+        <hr />
       </div>
-      <div><a href="index.html">Homepage</a></div>
     </div>
     <script src="tilaus.js"></script>
   </body>

@@ -33,7 +33,7 @@ function constructProductsList() {
   let productsList = "";
   orderData.products.forEach(function (key) {
     productsList +=
-      "<div><table class = 'products'><tr><th>Product</th><td>" +
+      "<div><table class = 'printPageProducts'><tr><th>Product</th><td>" +
       key.product +
       "</td></tr><tr><th>Quantity</th><td>" +
       key.qty +

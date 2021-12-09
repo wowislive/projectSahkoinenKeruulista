@@ -5,11 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sähköinen keruulista</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style></style>
   </head>
   <body onload="init()">
     <div>
       <div>
-        <div><input type="text" name="searchField" id="searchField" /></div>
+        <div>
+          <input
+            type="text"
+            name="searchField"
+            id="searchField"
+            class="inputText"
+          />
+        </div>
         <div>
           <input
             type="radio"
@@ -33,13 +42,15 @@
           />
           <label for="radioCustomerId">Customer ID</label>
         </div>
-        <div id="searchErrMsg" style="display: none; color: red">
-          <p>Select your search criteria ...</p>
+        <div id="searchErrMsg">
+          <p style="color: red">Select your search criteria ...</p>
         </div>
-        <div><input type="button" value="Search" id="searchBtn" /></div>
+        <br />
+        <div>
+          <input type="button" value="Search" id="searchBtn" class="myBtn" />
+        </div>
       </div>
-      <div><p></p></div>
     </div>
-    <script src="app.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
